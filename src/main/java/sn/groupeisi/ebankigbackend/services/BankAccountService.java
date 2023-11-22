@@ -1,17 +1,24 @@
 package sn.groupeisi.ebankigbackend.services;
 
+import sn.groupeisi.ebankigbackend.dto.CustomerDTO;
 import sn.groupeisi.ebankigbackend.entities.BankAccount;
-import sn.groupeisi.ebankigbackend.entities.Customer;
 import sn.groupeisi.ebankigbackend.exceptions.BalanceNotSufficientException;
 import sn.groupeisi.ebankigbackend.exceptions.BankAccountNotFoundExecption;
 
 import java.util.List;
 
 public interface BankAccountService {
-    Customer saveCustomer(Customer customer);
+    CustomerDTO saveCustomer(CustomerDTO customerDTO);
     BankAccount saveCurrentBankAccount(double initialBalance,double overDraft,Long customerId) ;
     BankAccount saveSavingBankAccount(double initialBalance,double interestRate,Long customerId);
-    List<Customer> listCustomers();
+
+    CustomerDTO updateCustomer(CustomerDTO customerDTO);
+
+    void deleteCustomer(Long customerId);
+
+    List<CustomerDTO> listCustomers();
+    CustomerDTO getCustomer(Long customerId);
+
     List<BankAccount> listBankAccounts();
 
     BankAccount getBankAccount(String accountId) throws BankAccountNotFoundExecption;

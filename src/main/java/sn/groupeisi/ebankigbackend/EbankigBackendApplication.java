@@ -4,6 +4,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import sn.groupeisi.ebankigbackend.dto.CustomerDTO;
 import sn.groupeisi.ebankigbackend.entities.BankAccount;
 import sn.groupeisi.ebankigbackend.entities.CurrentAccount;
 import sn.groupeisi.ebankigbackend.entities.Customer;
@@ -14,7 +15,6 @@ import sn.groupeisi.ebankigbackend.repository.AccountOperationRepository;
 import sn.groupeisi.ebankigbackend.repository.BankAccountRepository;
 import sn.groupeisi.ebankigbackend.repository.CustomerRepository;
 import sn.groupeisi.ebankigbackend.services.BankAccountService;
-import sn.groupeisi.ebankigbackend.services.BankAccountServiceImpl;
 
 import java.util.Date;
 import java.util.List;
@@ -31,10 +31,10 @@ public class EbankigBackendApplication {
         return args -> {
             try {
                 Stream.of("Hassan", "Imane", "Mohamed").forEach(name -> {
-                    Customer customer = new Customer();
-                    customer.setName(name);
-                    customer.setEmail(name + "@gmail.com");
-                    bankAccountService.saveCustomer(customer);
+                    CustomerDTO customerDTO = new CustomerDTO();
+                    customerDTO.setName(name);
+                    customerDTO.setEmail(name + "@gmail.com");
+                    bankAccountService.saveCustomer(customerDTO);
                 });
                 bankAccountService.listCustomers().forEach(customer -> {
                     try {
