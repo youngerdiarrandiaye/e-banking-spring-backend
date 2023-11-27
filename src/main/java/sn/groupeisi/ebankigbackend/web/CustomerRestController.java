@@ -18,6 +18,10 @@ public class CustomerRestController {
     public List<CustomerDTO> customers(){
         return bankAccountService.listCustomers();
     }
+    @PostMapping("/customers")
+    public CustomerDTO saveCustomer( @RequestBody CustomerDTO customerDTO){
+        return bankAccountService.saveCustomer(customerDTO);
+    }
     @GetMapping("/customers/{id}")
     public CustomerDTO getCustomer(@PathVariable(name = "id") Long customerId){
         return bankAccountService.getCustomer(customerId);
