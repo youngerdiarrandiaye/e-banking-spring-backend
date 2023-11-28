@@ -19,11 +19,15 @@ jobs:
           distribution: 'corretto'
           java-version: 17
 
-      - name: Unit Tests
-        run: mvn -B test --file pom.xml
+      #- name: Unit Tests
+      # run: mvn -B test --file pom.xml
 
       - name: Build the application
         run: |
           mvn clean
           mvn -B package --file pom.xml
-
+      - name: Build and analyze
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=youngerdiarrandiaye_e-banking-spring-backend
