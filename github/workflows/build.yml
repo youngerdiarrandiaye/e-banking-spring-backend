@@ -1,8 +1,9 @@
-name: Build
+name: Build sonarcloud scan
 on:
   push:
     branches:
       - main
+      - e-banking
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
