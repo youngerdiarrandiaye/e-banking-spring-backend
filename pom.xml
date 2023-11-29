@@ -8,15 +8,14 @@
         <version>3.1.4</version>
         <relativePath/>
     </parent>
-    <groupId>scls
-        n.groupeisi</groupId>
+    <groupId>sn.groupeisi</groupId>
     <artifactId>ebankig-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ebankig-backend</name>
     <description>ebankig-backend</description>
     <properties>
         <java.version>17</java.version>
-        <sonar.host.url>http://localhost:9001</sonar.host.url>
+        <sonar.host.url> http://localhost:9001</sonar.host.url>
     </properties>
     <dependencies>
         <dependency>
