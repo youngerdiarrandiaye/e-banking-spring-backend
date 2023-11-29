@@ -5,15 +5,11 @@ on:
     branches:
       - main
       - e-banking
-<<<<<<< HEAD
-      
 
-=======
   pull_request:
     types: [opened, synchronize, reopened]
 
 name: SonarQube Scan
->>>>>>> f61e61a (push pour test sonarcloud 2s)
 jobs:
   sonarqube:
     name: SonarQube Trigger
