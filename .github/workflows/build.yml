@@ -30,4 +30,7 @@ jobs:
         with:
           host: ${{ secrets.SONARQUBE_HOST }}
           login: ${{ secrets.SONARQUBE_TOKEN }}
-          projectKey: test_clean_code  # Replace with your actual project key
+          projectKey: Github-Action-Scan # Replace with your actual project key
+          args: >
+            -Dsonar.java.binaries=target/classes
+
