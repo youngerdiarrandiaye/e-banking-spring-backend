@@ -15,7 +15,7 @@
     <description>ebankig-backend</description>
     <properties>
         <java.version>17</java.version>
-        <sonar.host.url>http://localhost:9001</sonar.host.url>
+        <sonar.host.url>http:172.17.0.2:9001</sonar.host.url>
     </properties>
     <dependencies>
         <dependency>
