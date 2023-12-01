@@ -1,5 +1,5 @@
 # e-banking-spring-backend
-## Telecharger Limage Sonarqube dans docker:
+## Telecharger L'image Sonarqube dans docker:
 docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9001:9000 sonarqube:latest
 ![sonarqube apartir docker](https://github.com/youngerdiarrandiaye/e-banking-spring-backend/assets/122989242/dfda760a-877a-4233-904d-8a8c9ce6b4b6)
 Image Sonarqube disponible sur mon docker
@@ -23,7 +23,7 @@ code de mon github/workflows/build.yml
    https://5a3f-154-125-199-254.ngrok-free.app -> http://localhost:9001  
   ![ngrok](https://github.com/youngerdiarrandiaye/e-banking-spring-backend/assets/122989242/ea6aef88-2700-4593-adea-480090ca97dc)
 - [SONARQUBE_TOKEN](#SONARQUBE_TOKENT )
-  on le genere apartir de la creation de mon projet au iveau d esonarqube
+  on le genere apartir de la creation de mon projet au niveau de sonarqube
   #GITHUB_ACTION_SCAN     sqp_90ecfb99683410e9deb5e33e1f296451b7d94a0c
 
   [GITHUB_ACTION_SCAN ](#GITHUB_ACTION_SCAN )
