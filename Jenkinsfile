@@ -16,7 +16,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh "docker run --name ebankig-backend -d -p 8080:8080 ebankig-backend:v1"
+        sh "docker run --name ebankig-backend -d -p 8085:8085 ebankig-backend:v1"
       }
     }
   }
