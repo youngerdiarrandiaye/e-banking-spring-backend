@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import sn.groupeisi.ebankigbackend.dto.CustomerDTO;
-import sn.groupeisi.ebankigbackend.entities.Customer;
 import sn.groupeisi.ebankigbackend.services.BankAccountService;
 
 import java.util.List;
